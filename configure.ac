@@ -178,6 +178,12 @@ AC_ARG_WITH(brandoem,
 AC_SUBST(BRAND_OEM)
 AC_DEFINE_UNQUOTED(BRAND_OEM,"$BRAND_OEM",[brand oem])
 
+AC_ARG_WITH(brandname,
+	[  --with-brandname=NAME brand name [[DAGS,DMM,...]]],
+	[MACHINE_BRAND="$withval"],[MACHINE_BRAND="dags"])
+AC_SUBST(MACHINE_BRAND)
+AC_DEFINE_UNQUOTED(MACHINE_BRAND,"$MACHINE_BRAND",[brand name])
+
 AC_ARG_WITH(imageversion,
 	[  --with-imageversion=NAME version number [[3.0]]],
 	[IMAGEVERSION="$withval"],[IMAGEVERSION=""])
@@ -261,6 +267,36 @@ AC_ARG_WITH(socfamily,
 	[SOCFAMILY="$withval"],[SOCFAMILY=""])
 AC_SUBST(SOCFAMILY)
 AC_DEFINE_UNQUOTED(SOCFAMILY,"$SOCFAMILY",[SoC family])
+
+AC_ARG_WITH(rcidnum,
+	[  --with-rcidnum=NUMBER rc id number [[2,...]]],
+	[RCIDNUM="$withval"],[RCIDNUM=""])
+AC_SUBST(RCIDNUM)
+AC_DEFINE_UNQUOTED(RCIDNUM,"$RCIDNUM",[rc id number])
+
+AC_ARG_WITH(rctype,
+	[  --with-rctype=NUMBER rc type [[0,...]]],
+	[RCTYPE="$withval"],[RCTYPE=""])
+AC_SUBST(RCTYPE)
+AC_DEFINE_UNQUOTED(RCTYPE,"$RCTYPE",[rc type])
+
+AC_ARG_WITH(rcname,
+	[  --with-rcname=NAME rc name [[dmm,...]]],
+	[RCNAME="$withval"],[RCNAME=""])
+AC_SUBST(RCNAME)
+AC_DEFINE_UNQUOTED(RCNAME,"$RCNAME",[rc name])
+
+AC_ARG_WITH(blindscanbinary,
+	[  --with-blindscanbinary=NAME blindscan binary [[blindscan,...]]],
+	[BLINDSCANBINARY="$withval"],[BLINDSCANBINARY=""])
+AC_SUBST(BLINDSCANBINARY)
+AC_DEFINE_UNQUOTED(BLINDSCANBINARY,"$BLINDSCANBINARY",[blindscan binary])
+
+AC_ARG_WITH(dboxlcd,
+	[  --with-dboxlcd=NAME dboxlcd [[dboxlcd......]]],
+	[SUPPORT_DBOXLCD="$withval"],[SUPPORT_DBOXLCD="True"])
+AC_SUBST(SUPPORT_DBOXLCD)
+AC_DEFINE_UNQUOTED(SUPPORT_DBOXLCD,"$SUPPORT_DBOXLCD",[dboxlcd])
 
 AC_ARG_WITH(vfd-symbol,
 	[  --with-vfd-symbol=NAME vfd symbol [[vfdsymbol,...]]],

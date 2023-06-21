@@ -474,6 +474,11 @@ char *_getMachineName()
 	return strdup(MACHINE_NAME);
 }
 
+char *_getBrand()
+{
+	return strdup(MACHINE_BRAND);
+}
+
 char *_getMachineBrand()
 {
 	return strdup(MACHINE_BRAND);
@@ -666,6 +671,16 @@ char *_getHaveWWOL()
 	return strdup(HAVE_WWOL);
 }
 
+char *_getHaveTranscoding()
+{
+	return strdup(HAVE_TRANSCODING);
+}
+
+char *_getHaveMultiTranscoding()
+{
+	return strdup(HAVE_MULTITRANSCODING);
+}
+
 char *_getHaveTranscoding1()
 {
 	return strdup(HAVE_TRANSCODING_TYPE1);
@@ -756,6 +771,33 @@ char *_getMachineUBINIZE()
 char *_getSoCFamily()
 {
 	return strdup(SOCFAMILY);
+}
+
+char *_getRCIDNum()
+{
+	return strdup(RCIDNUM);
+}
+
+char *_getRCType()
+{
+	return strdup(RCTYPE);
+}
+
+char *_getRCName()
+{
+	return strdup(RCNAME);
+}
+
+char *_getBlindscanBin()
+{
+	return strdup(BLINDSCANBINARY);
+}
+
+char *_getDBoxLCD()
+{
+	if(strcmp(SUPPORT_DBOXLCD, "False") == 0)
+		return strdup("");
+	return strdup(SUPPORT_DBOXLCD);
 }
 
 char *_getHaveVFDSymbol()

@@ -12,6 +12,7 @@ char *ReadProcEntry(char *filename);
 
 char *_getBoxType();
 char *_getMachineName();
+char *_getBrand();
 char *_getMachineBrand();
 char *_getBrandOEM();
 char *_getDriverDate();
@@ -47,9 +48,17 @@ char *_getHaveHDMIinHD();
 char *_getHaveHDMIinFHD();
 char *_getHaveWOL();
 char *_getHaveWWOL();
+char *_getHaveTranscoding();
+char *_getHaveMultiTranscoding();
 char *_getHaveTranscoding1();
 char *_getHaveTranscoding2();
 char *_getHaveCI();
+char *_getRCIDNum();
+char *_getRCType();
+char *_getRCName();
+char *_getBlindscanBin();
+char *_getDBoxLCD();
+char *_getHaveVFDSymbol();
 char *_getSoCFamily();
 char *_getHaveVFDSymbol();
 
